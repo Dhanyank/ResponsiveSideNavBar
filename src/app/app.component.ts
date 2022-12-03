@@ -1,5 +1,10 @@
-import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { Component} from '@angular/core';
+import { Observable} from 'rxjs';
+import {map,shareReplay} from 'rxjs/operators'
+
+
+
 
 
 
@@ -9,12 +14,17 @@ import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnDestroy {
+export class AppComponent {
   title = 'ResponsiveNav';
 
-  mobileQuery: MediaQueryList;
 
-  navData= Array.from({ length: 10 }, (_, i) => `Data ${i + 1}`);
+  isMobile$:Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches),
+    shareReplay()
+
+  );
+    navData= Array.from({ length: 10 }, (_, i) => `Data ${i + 1}`);
   navContent = Array.from(
 
     { length: 10 },
@@ -26,18 +36,7 @@ export class AppComponent implements OnDestroy {
        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
   );
 
-  private _mobileQueryListener: () => void;
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 500px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-  }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-
-  
+  constructor(private breakpointObserver:BreakpointObserver){}
 }
+
 
