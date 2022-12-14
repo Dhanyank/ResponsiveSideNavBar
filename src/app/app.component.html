@@ -1,8 +1,8 @@
 <mat-toolbar color="primary" class="example-toolbar">
-  <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
 
-  <button mat-icon-button (click)="drawer.toggle()" *ngIf="isMobile$ | async">
+  <button mat-icon-button (click)="drawer.toggle()" opened="false"> <mat-icon>menu</mat-icon>
   </button>
+
   <h1 class="example">Responsive Nav</h1>
 </mat-toolbar>
 

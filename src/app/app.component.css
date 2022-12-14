@@ -1,28 +1,14 @@
 .example-container {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-  }
   
-  /* .example-is-mobile .example-toolbar {
-    position: fixed;
-    z-index: 2;
-  }
-  
-  h1.example {
-    margin-left: 8px;
-  }
-  
-  .sidenavContainer {
-    flex: 1;
-  }
-  
-  .example-is-mobile .sidenavContainer {
 
-    flex: 1 0 auto;
   }
-   */
+  #sidenav{
+    overflow: hidden;
+  }

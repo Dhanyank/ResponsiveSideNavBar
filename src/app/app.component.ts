@@ -14,8 +14,10 @@ import {map,shareReplay} from 'rxjs/operators'
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent  {
   title = 'ResponsiveNav';
+  
+  opened=true;
 
 
   isMobile$:Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -36,7 +38,13 @@ export class AppComponent {
        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
   );
 
-  constructor(private breakpointObserver:BreakpointObserver){}
+  constructor(private breakpointObserver:BreakpointObserver){
+
+     }
+     toggle(){
+       this.opened=!this.opened
+     }
 }
+
 
 
