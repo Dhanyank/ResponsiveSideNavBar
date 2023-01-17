@@ -3,12 +3,15 @@ import { Component} from '@angular/core';
 import { Observable} from 'rxjs';
 import {map,shareReplay} from 'rxjs/operators'
 
+import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 
 
 
 
 
 @Component({
+
+
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -29,7 +32,7 @@ export class AppComponent  {
     navData= Array.from({ length: 10 }, (_, i) => `Data ${i + 1}`);
   navContent = Array.from(
 
-    { length: 10 },
+    { length: 5 },
     () =>
       `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -44,7 +47,10 @@ export class AppComponent  {
      toggle(){
        this.opened=!this.opened
      }
-}
+
+  }
+  
+
 
 
 

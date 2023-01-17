@@ -1,6 +1,7 @@
 <mat-toolbar color="primary" class="example-toolbar">
 
-  <button mat-icon-button (click)="drawer.toggle()" opened="false"> <mat-icon>menu</mat-icon>
+  <button mat-icon-button (click)="drawer.toggle()" opened="false">
+    <mat-icon>menu</mat-icon>
   </button>
 
   <h1 class="example">Responsive Nav</h1>
@@ -15,10 +16,28 @@
       <a mat-list-item routerLink="." *ngFor="let nav of navData">{{nav}}</a>
 
     </mat-nav-list>
-
   </mat-sidenav>
   <mat-sidenav-content>
-    <p *ngFor="let content of navContent">{{content}}</p>
+    <mat-tab-group>
+
+       <mat-tab label="Upcoming Appointments">
+
+        <p *ngFor="let content of navContent">{{content}}</p>
+
+
+      </mat-tab>
+
+      <mat-tab label="Past Appointments">
+        <p *ngFor="let content of navContent">{{content}}</p>
+
+      </mat-tab>
+
+
+        </mat-tab-group>
+      
+      
+
+
   </mat-sidenav-content>
 
 </mat-sidenav-container>

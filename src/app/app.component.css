@@ -9,6 +9,35 @@
   
 
   }
+
+
+
+ :host ::ng-deep .mat-tab-label-active {
+  border-width: 9px;
+  border-style:inset;
+  border-color: black;
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  background-color:grey;
+}
+
   #sidenav{
     overflow: hidden;
   }
+  .mat-tab-group
+  {
+    width:fit-content;
+    box-sizing: border-box;
+    margin-top: 150px;
+  }
+
+   .mat-tab-label{
+    padding: 5px;
+       background-color:black;
+        color:white;
+        font-weight: 700;
+        width:fit-content;
+;
+}
+
+

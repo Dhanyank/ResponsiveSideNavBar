@@ -10,6 +10,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +24,20 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
+    MatFormFieldModule,
+    FormsModule,
+    
     BrowserAnimationsModule,
+    MatDatepickerModule,
 MatIconModule,
 MatToolbarModule,
 MatButtonModule,
 MatListModule,
 MatButtonToggleModule,
+MatButtonModule,
+MatTabsModule,
+
+
 
 
 
