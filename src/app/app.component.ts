@@ -29,10 +29,10 @@ export class AppComponent  {
     shareReplay()
 
   );
-    navData= Array.from({ length: 10 }, (_, i) => `Data ${i + 1}`);
+    navData= Array.from({ length: 20 }, (_, i) => `Data ${i + 1}`);
   navContent = Array.from(
 
-    { length: 5 },
+    { length: 10 },
     () =>
       `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

@@ -14,6 +14,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSidenavModule,
     MatFormFieldModule,
     FormsModule,
-    
+    ScrollingModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
 MatIconModule,

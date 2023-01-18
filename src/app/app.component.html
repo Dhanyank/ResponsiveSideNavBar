@@ -10,13 +10,16 @@
 
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewPort [attr.role]="(isMobile$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isMobile$ | async) ? 'over' : 'side'" [opened]="(isMobile$ | async) === false">
+      [mode]="(isMobile$ | async) ? 'over' : 'side'" [opened]="(isMobile$ | async) === false">
 
     <mat-nav-list>
-      <a mat-list-item routerLink="." *ngFor="let nav of navData">{{nav}}</a>
 
-    </mat-nav-list>
+      
+      <a mat-list-item routerLink="." *ngFor="let nav of navData">{{nav}}</a>
+  </mat-nav-list>
+
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-tab-group>
 
