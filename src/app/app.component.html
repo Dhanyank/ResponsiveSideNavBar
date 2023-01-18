@@ -7,38 +7,49 @@
   <h1 class="example">Responsive Nav</h1>
 </mat-toolbar>
 
-
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewPort [attr.role]="(isMobile$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isMobile$ | async) ? 'over' : 'side'" [opened]="(isMobile$ | async) === false">
+    [mode]="(isMobile$ | async) ? 'over' : 'side'" [opened]="(isMobile$ | async) === false">
 
     <mat-nav-list>
 
-      
+
       <a mat-list-item routerLink="." *ngFor="let nav of navData">{{nav}}</a>
-  </mat-nav-list>
+    </mat-nav-list>
 
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-tab-group>
-
-       <mat-tab label="Upcoming Appointments">
-
-        <p *ngFor="let content of navContent">{{content}}</p>
 
 
-      </mat-tab>
+    <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
+      <input type="radio" name="pcss3t" checked id="tab1" class="tab-content-first">
+      <label for="tab1">Upcoming Appointments</label>
 
-      <mat-tab label="Past Appointments">
-        <p *ngFor="let content of navContent">{{content}}</p>
-
-      </mat-tab>
+      <input type="radio" name="pcss3t" id="tab2" class="tab-content-2">
+      <label for="tab2">Past Appointments</label>
 
 
-        </mat-tab-group>
-      
-      
+      <ul>
+        <li class="tab-content tab-content-first typography">
+          <h1>Upcoming Appointments</h1>
+          <p *ngFor="let content of navContent">{{content}}</p>
+
+          <p class="text-right"><em>More...... <a
+                href="http://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Wikipedia</a>.</em></p>
+        </li>
+
+        <li class="tab-content tab-content-2 typography">
+          <h1>Past Appointments</h1>
+          <p *ngFor="let content of navContent">{{content}}</p>
+
+          <p class="text-right"><em>More.......<a
+                href="http://en.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">Wikipedia</a>.</em></p>
+        </li>
+
+      </ul>
+    </div>
+    <!--/ tabs -->
 
 
   </mat-sidenav-content>
